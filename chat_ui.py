@@ -1,5 +1,3 @@
-import time
-
 import streamlit as st
 from phobert_disease_predictor import get_model_path, load_phobert_model, n_predict, AutoTokenizer, LabelEncoder, encoder, dataset_loader
 

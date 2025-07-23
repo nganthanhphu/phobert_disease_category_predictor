@@ -1,0 +1,10 @@
+streamlit
+scikit-learn
+mathplotlib
+numpy
+pandas
+seaborn
+torch
+transformers
+underthesea
+huggingface_hub
