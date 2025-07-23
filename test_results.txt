@@ -1,0 +1,300 @@
+Câu hỏi: Tôi thường xuyên quên tên người quen và không nhớ được những sự kiện vừa xảy ra. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Rối Loạn Phân Ly
+------------------------------
+Câu hỏi: Tôi cảm thấy bối rối về thời gian và không gian cũng như gặp khó khăn trong việc tính toán đơn giản. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Alzheimer
+------------------------------
+Câu hỏi: Tôi không thể tìm được từ ngữ phù hợp khi nói chuyện và thường để quên đồ vật ở những nơi lạ. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Thần Kinh Ngoại Biên
+------------------------------
+Câu hỏi: Tôi thay đổi tính cách đột ngột và gặp khó khăn trong việc thực hiện các công việc quen thuộc hàng ngày. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Parkinson
+------------------------------
+Câu hỏi: Tôi bị sốt cao đột ngột kèm theo đau đầu và đau cơ toàn thân. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Cúm
+------------------------------
+Câu hỏi: Tôi ho khan liên tục và cảm thấy mệt mỏi kiệt sức bất thường. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Lao Phổi
+------------------------------
+Câu hỏi: Tôi bị nghẹt mũi và chảy nước mũi kèm theo đau họng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Viêm Xoang Mũi Dị Ứng
+------------------------------
+Câu hỏi: Tôi ớn lạnh và run rẩy mặc dù thời tiết không lạnh cùng với triệu chứng buồn nôn. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Parkinson
+------------------------------
+Câu hỏi: Tôi bị đau khớp ngón chân cái đột ngột và dữ dội vào ban đêm. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Gout
+------------------------------
+Câu hỏi: Tôi thấy khớp bị sưng đỏ và nóng rát không thể chạm vào. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Viêm Khớp
+------------------------------
+Câu hỏi: Tôi có các hạt tophi xuất hiện quanh khớp và bị hạn chế vận động. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Hạt Tophi
+------------------------------
+Câu hỏi: Tôi đau khớp cổ chân và đầu gối kèm theo cảm giác cứng khớp vào buổi sáng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Gout
+------------------------------
+Câu hỏi: Tôi bị phát ban dạng mụn nước nhỏ lan rộng khắp cơ thể và ngứa rất nhiều. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Thủy Đậu
+------------------------------
+Câu hỏi: Tôi sốt nhẹ và mệt mỏi kèm theo các nốt ban chuyển từ đỏ thành mụn nước rồi khô vảy. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mụn Ẩn
+------------------------------
+Câu hỏi: Tôi bị đau đầu và chán ăn với các vết loét nhỏ trong miệng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Thủy Đậu
+------------------------------
+Câu hỏi: Tôi thấy da và mắt chuyển màu vàng cùng với nước tiểu sậm màu. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Nóng Gan
+------------------------------
+Câu hỏi: Tôi đau bụng vùng gan và cảm thấy mệt mỏi kéo dài. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Sỏi Ống Mật Chủ
+------------------------------
+Câu hỏi: Tôi buồn nôn và nôn thực tế kèm theo chán ăn hoàn toàn. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Ăn Không Tiêu
+------------------------------
+Câu hỏi: Tôi tăng cân không kiểm soát được và khó thở khi hoạt động nhẹ. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Phổi Tắc Nghẽn Mạn Tính (COPD)
+------------------------------
+Câu hỏi: Tôi đau khớp gối và lưng do phải chịu trọng lượng cơ thể quá mức. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Đau Khớp
+------------------------------
+Câu hỏi: Tôi ngủ ngáy to và thường cảm thấy buồn ngủ vào ban ngày. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Ngưng Thở Khi Ngủ
+------------------------------
+Câu hỏi: Tôi bị đau và cứng khớp vào buổi sáng kéo dài hơn 30 phút. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Cứng Khớp
+------------------------------
+Câu hỏi: Tôi khó khăn trong việc di chuyển và khớp bị sưng đau khi thời tiết thay đổi. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Cứng Khớp
+------------------------------
+Câu hỏi: Tôi nghe tiếng kêu răng rắc khi cử động khớp và bị hạn chế phạm vi vận động. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Cứng Khớp
+------------------------------
+Câu hỏi: Tôi cảm thấy đau tức vùng hạ sườn phải và mệt mỏi thường xuyên. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Gan Nhiễm Mỡ Độ 2
+------------------------------
+Câu hỏi: Tôi bị đầy bụng và khó tiêu sau bữa ăn đặc biệt là thức ăn nhiều dầu mỡ. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Polyp Dạ Dày
+------------------------------
+Câu hỏi: Tôi tăng cân đột ngột tập trung ở vùng bụng và có triệu chứng kháng insulin. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mất Cân Bằng Nội Tiết Tố
+------------------------------
+Câu hỏi: Tôi khó ngủ hoặc thường xuyên thức giấc vào ban đêm và không thể ngủ lại. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mất Ngủ Kéo Dài
+------------------------------
+Câu hỏi: Tôi thức dậy sớm hơn bình thường và cảm thấy mệt mỏi suốt cả ngày. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mất Ngủ Kéo Dài
+------------------------------
+Câu hỏi: Tôi khó tập trung làm việc và dễ cáu gắt do thiếu ngủ kéo dài. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mất Ngủ Kéo Dài
+------------------------------
+Câu hỏi: Tôi bị nổi mẩn đỏ sưng lên trên da kèm theo cảm giác ngứa dữ dội. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Thủy Đậu
+------------------------------
+Câu hỏi: Tôi thấy các nốt ban xuất hiện và biến mất đột ngột ở nhiều vị trí khác nhau trên cơ thể. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Đậu Mùa
+------------------------------
+Câu hỏi: Tôi bị sưng môi và mí mắt cùng với cảm giác nóng rát vùng da bị ảnh hưởng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Viêm Bờ Mi Trên Mắt
+------------------------------
+Câu hỏi: Tôi cảm thấy khó nghe rõ lời nói của người khác và thường phải yêu cầu họ nói to hơn. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Xốp Xơ Tai
+------------------------------
+Câu hỏi: Tôi nghe thấy tiếng ù hoặc tiếng reo trong tai liên tục. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Xốp Xơ Tai
+------------------------------
+Câu hỏi: Tôi khó phân biệt âm thanh khi ở trong môi trường ồn ào và cảm thấy cô lập trong các cuộc trò chuyện. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Xốp Xơ Tai
+------------------------------
+Câu hỏi: Tôi bị đau bụng trên và cảm giác no sớm khi ăn ít thức ăn. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Viêm Tụy
+------------------------------
+Câu hỏi: Tôi buồn nôn và nôn thực tế sau bữa ăn cùng với triệu chứng khó tiêu. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Viêm Loét Dạ Dày
+------------------------------
+Câu hỏi: Tôi thấy máu trong nôn hoặc phân có màu đen cùng với cảm giác đầy bụng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Polyp Dạ Dày
+------------------------------
+Câu hỏi: Tôi thay đổi thói quen đại tiện với triệu chứng táo bón hoặc tiêu chảy kéo dài. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Táo Bón
+------------------------------
+Câu hỏi: Tôi thấy máu trong phân hoặc phân có màu sậm bất thường. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Rối Loạn Tiêu Hóa
+------------------------------
+Câu hỏi: Tôi đau bụng dưới và cảm giác không hết sạch sau khi đi vệ sinh. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Trĩ Ngoại
+------------------------------
+Câu hỏi: Tôi bị chảy máu khi đi vệ sinh và thấy máu tươi trên giấy vệ sinh. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Trĩ Ngoại
+------------------------------
+Câu hỏi: Tôi cảm thấy có khối u nhỏ lòi ra ngoài hậu môn khi rặn. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Sa Trực Tràng
+------------------------------
+Câu hỏi: Tôi ngứa và khó chịu vùng hậu môn cùng với cảm giác có dị vật. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Áp Xe Hậu Môn
+------------------------------
+Câu hỏi: Tôi bị chảy máu trực tràng và cảm giác đại tiện không hết sạch. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Áp Xe Hậu Môn
+------------------------------
+Câu hỏi: Tôi đau và khó chịu vùng hậu môn kèm theo thay đổi hình dạng phân. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Sa Trực Tràng
+------------------------------
+Câu hỏi: Tôi có triệu chứng tiêu chảy có máu và cảm giác có khối bất thường trong trực tràng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Sa Trực Tràng
+------------------------------
+Câu hỏi: Tôi ra mồ hôi tay và chân quá nhiều ngay cả khi không hoạt động mạnh hoặc thời tiết mát. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Ra Mồ Hôi Tay Chân Nhiều
+------------------------------
+Câu hỏi: Tôi cảm thấy tay chân ướt át liên tục gây khó khăn trong công việc và sinh hoạt hàng ngày. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Thần Kinh Ngoại Biên
+------------------------------
+Câu hỏi: Tôi ngại giao tiếp vì tay ướt khi bắt tay và để lại vết mồ hôi trên các vật dụng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Ra Mồ Hôi Tay Chân Nhiều
+------------------------------
+Câu hỏi: Tôi phải thay đổi tất giày thường xuyên do chân ra mồ hôi quá nhiều và có mùi. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Thần Kinh Ngoại Biên
+------------------------------
+Câu hỏi: Tôi bị nấm chân do môi trường ẩm ướt thường xuyên và da tay chân bị ngâm nước. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Suy Giãn Tĩnh Mạch Sau Chi Dưới
+------------------------------
+Câu hỏi: Tôi cảm thấy lo lắng và tự ti về tình trạng ra mồ hôi quá mức này. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Tăng Tiết Mồ Hôi
+------------------------------
+Câu hỏi: Tôi cảm thấy lo lắng quá mức về những việc nhỏ nhặt và khó kiểm soát cảm xúc. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Rối Loạn Lo Âu Lan Tỏa
+------------------------------
+Câu hỏi: Tôi bị đau đầu và căng thẳng cơ bắp do stress kéo dài. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Rối Loạn Giấc Ngủ
+------------------------------
+Câu hỏi: Tôi khó tập trung làm việc và thường xuyên cảm thấy bồn chồn lo âu. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mất Ngủ Kéo Dài
+------------------------------
+Câu hỏi: Tôi bị rối loạn giấc ngủ và thường thức dậy với cảm giác căng thẳng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Rối Loạn Giấc Ngủ
+------------------------------
+Câu hỏi: Tôi có các cơn hoảng sợ đột ngột kèm theo tim đập nhanh và khó thở. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Nhịp Nhanh Thất
+------------------------------
+Câu hỏi: Tôi tránh né các tình huống xã hội và cảm thấy mệt mỏi tinh thần thường xuyên. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mất Ngủ Kéo Dài
+------------------------------
+Câu hỏi: Tôi có triệu chứng run tay và đổ mồ hôi khi gặp áp lực. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Suy Thận Cấp
+------------------------------
+Câu hỏi: Tôi cảm thấy tim đập nhanh bất thường hoặc bỏ nhịp trong lúc nghỉ ngơi. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Hội Chứng Brugada
+------------------------------
+Câu hỏi: Tôi chóng mặt và cảm giác như sắp ngất xỉu khi đứng dậy. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Chóng Mặt Khi Nằm Xuống Giường
+------------------------------
+Câu hỏi: Tôi khó thở và đau ngực kèm theo cảm giác tim loạn nhịp. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Ngoại Tâm Thu Thất
+------------------------------
+Câu hỏi: Tôi mệt mỏi bất thường và giảm khả năng vận động do tim không đều. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Hẹp Van Hai Lá
+------------------------------
+Câu hỏi: Tôi cảm thấy hồi hộp và lo lắng khi nhận biết được nhịp tim bất thường. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Ngoại Tâm Thu Thất
+------------------------------
+Câu hỏi: Tôi bị đổ mồ hôi lạnh và run rẩy khi có cơn loạn nhịp tim. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Hội Chứng Brugada
+------------------------------
+Câu hỏi: Tôi thường xuyên cảm thấy tim đập mạnh đến mức có thể nghe thấy. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Hẹp Van Động Mạch Chủ
+------------------------------
+Câu hỏi: Tôi bị chóng mặt và cảm giác xung quanh quay cuồng đặc biệt khi thay đổi tư thế. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Chóng Mặt
+------------------------------
+Câu hỏi: Tôi buồn nôn và nôn thực tế kèm theo mất thăng bằng khi đi lại. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Moyamoya
+------------------------------
+Câu hỏi: Tôi nghe kém và có tiếng ù tai liên tục cùng với cảm giác tai bị đầy. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Nghe Kém Một Bên Tai
+------------------------------
+Câu hỏi: Tôi đau bụng và cảm giác khó tiêu sau mỗi bữa ăn. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Polyp Dạ Dày
+------------------------------
+Câu hỏi: Tôi bị tiêu chảy hoặc táo bón thay đổi không thường xuyên. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Thần Kinh
+------------------------------
+Câu hỏi: Tôi đầy bụng và ợ hơi nhiều cùng với cảm giác tức bụng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Polyp Dạ Dày
+------------------------------
+Câu hỏi: Tôi buồn nôn và chán ăn kéo dài nhiều ngày. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Nóng Gan
+------------------------------
+Câu hỏi: Tôi bị ợ chua và cảm giác nóng rát ở ngực sau khi ăn. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Trào Ngược Dạ Dày Thực Quản
+------------------------------
+Câu hỏi: Tôi sụt cân không rõ nguyên nhân cùng với các triệu chứng tiêu hóa. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Viêm Ruột Mạn Tính
+------------------------------
+Câu hỏi: Tôi thấy máu hoặc chất nhầy trong phân kèm theo đau bụng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Táo Bón
+------------------------------
+Câu hỏi: Tôi thường xuyên bị đau đầu và chóng mặt đặc biệt vào buổi sáng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Hội Chứng Brugada
+------------------------------
+Câu hỏi: Tôi cảm thấy mệt mỏi và khó thở khi gắng sức nhẹ. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Hẹp Van Động Mạch Chủ
+------------------------------
+Câu hỏi: Tôi bị đau ngực và tim đập nhanh cùng với triệu chứng ù tai. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Nấm Ống Tai Ngoài
+------------------------------
+Câu hỏi: Tôi khó đi vệ sinh và phân cứng khô gây đau khi đại tiện. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Nứt Kẽ Hậu Môn
+------------------------------
+Câu hỏi: Tôi đầy bụng và đau bụng dưới do nhiều ngày không đi vệ sinh được. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Nứt Kẽ Hậu Môn
+------------------------------
+Câu hỏi: Tôi phải rặn mạnh khi đi vệ sinh và cảm giác không hết sạch. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Trĩ Ngoại
+------------------------------
+Câu hỏi: Tôi cảm thấy buồn bã và mất hứng thú với mọi hoạt động trong cuộc sống. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Trầm Cảm
+------------------------------
+Câu hỏi: Tôi rối loạn giấc ngủ và thay đổi cân nặng bất thường. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mất Cân Bằng Nội Tiết Tố
+------------------------------
+Câu hỏi: Tôi mệt mỏi thường xuyên và khó tập trung vào công việc học tập. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Mất Ngủ Kéo Dài
+------------------------------
+Câu hỏi: Tôi có cảm giác tuyệt vọng và đôi khi nghĩ đến việc tự làm hại bản thân. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Trầm Cảm
+------------------------------
+Câu hỏi: Tôi bị đau đầu dữ dội và dai dẳng khác với đau đầu thông thường. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Moyamoya
+------------------------------
+Câu hỏi: Tôi buồn nôn và nôn thực tế không liên quan đến thức ăn cùng với rối loạn thị lực. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Não Úng Thủy
+------------------------------
+Câu hỏi: Tôi thay đổi tính cách và khó khăn trong việc nói hoặc hiểu ngôn ngữ. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Não Úng Thủy
+------------------------------
+Câu hỏi: Tôi đau xương dai dẳng và tăng nặng vào ban đêm không thuyên giảm bằng thuốc giảm đau thông thường. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Ung Thư Xương
+------------------------------
+Câu hỏi: Tôi thấy khối sưng ở xương và hạn chế vận động vùng bị ảnh hưởng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: U Xương
+------------------------------
+Câu hỏi: Tôi bị gãy xương dễ dàng ngay cả khi chấn thương nhẹ và sụt cân không rõ nguyên nhân. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: U Xương
+------------------------------
+Câu hỏi: Tôi thấy nốt ruồi thay đổi màu sắc và kích thước bất thường trên da. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Nốt Ruồi
+------------------------------
+Câu hỏi: Tôi có vết loét trên da không lành sau nhiều tuần và chảy máu dễ dàng. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Bệnh Whitmore
+------------------------------
+Câu hỏi: Tôi phát hiện vết bất thường trên da có viền không đều và nhiều màu sắc khác nhau. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Sẹo Lồi
+------------------------------
+Câu hỏi: Tôi đau bụng trên dai dẳng và sụt cân nhanh chóng không rõ nguyên nhân. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Viêm Tụy
+------------------------------
+Câu hỏi: Tôi buồn nôn thường xuyên và cảm giác no sớm khi ăn ít thức ăn. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Ngưng Thở Khi Ngủ
+------------------------------
+Câu hỏi: Tôi nôn ra máu hoặc phân có màu đen cùng với triệu chứng khó nuốt. Tôi có thể đang bị bệnh gì?
+Dự đoán bệnh: Viêm Dạ Dày Cấp
+------------------------------

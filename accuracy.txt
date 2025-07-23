@@ -1,0 +1,5 @@
+MedicalTestDataset : 62.5%
+Tổng số mẫu: 100
+Mẫu dự đoán đúng: 52
+Mẫu dự đoán đúng 1 phần: 21
+Mẫu dự đoán sai: 27
