@@ -48,6 +48,8 @@ with st.form(key="chat_form", clear_on_submit=True):
     if send_btn and user_input.strip():
         st.session_state["messages"].append({"role": "user", "content": user_input})
         diseases = n_predict(user_input, model, tokenizer, label_encoder, top_k=3)
+        bot_intro = "Dựa trên các triệu chứng của bạn, các bệnh bạn có thể mắc phải là: "
+        st.session_state["messages"].append({"role": "bot", "content": bot_intro})
         bot_reply = "<br>".join([f"Bệnh {i + 1}: {d}" for i, d in enumerate(diseases)])
         st.session_state["messages"].append({"role": "bot", "content": bot_reply})
         st.rerun()
