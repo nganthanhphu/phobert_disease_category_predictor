@@ -120,7 +120,7 @@ class PhoBERTClassifier(torch.nn.Module):
 # Lop Dataset tuy chinh cho viec huan luyen PhoBERT
 class PhoBERTDataset(Dataset):
     def __init__(self, x, y, tokenizer, max_length=128):
-        self.encodings = tokenizer(x, padding=True, truncation=True, max_length=max_length, return_tensors="pt")
+        self.encodings = phobert_encode(x, tokenizer, max_length)
         self.labels = torch.tensor(y)
 
     def __getitem__(self, idx):
@@ -200,7 +200,7 @@ def test_model_using_dataset(model, tokenizer, label_encoder, dataset, feature_c
 def predict(x, model, tokenizer, label_encoder):
     model.eval()
     with torch.no_grad():
-        inputs = tokenizer(x, padding=True, truncation=True, max_length=128, return_tensors="pt")
+        inputs = phobert_encode(x, tokenizer)
         input_ids = inputs['input_ids'].to(device)
         attention_mask = inputs['attention_mask'].to(device)
         logits = model(input_ids, attention_mask)
@@ -210,7 +210,7 @@ def predict(x, model, tokenizer, label_encoder):
 def n_predict(x, model, tokenizer, label_encoder, top_k=3):
     model.eval()
     with torch.no_grad():
-        inputs = tokenizer(x, padding=True, truncation=True, max_length=128, return_tensors="pt")
+        inputs = phobert_encode(x, tokenizer)
         input_ids = inputs['input_ids'].to(device)
         attention_mask = inputs['attention_mask'].to(device)
         logits = model(input_ids, attention_mask)
