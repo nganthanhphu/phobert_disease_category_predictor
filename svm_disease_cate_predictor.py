@@ -6,10 +6,10 @@ import pandas as pd
 import requests
 import seaborn as sns
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
+from sklearn.svm import SVC
 from sklearn.utils.class_weight import compute_class_weight
 from underthesea import word_tokenize
 
@@ -78,7 +78,7 @@ def vectorizer_data(vtr, data, processed_feature_colname=None):
 def load_model(X, Y):
     class_weights = compute_class_weight(class_weight='balanced', classes=np.unique(Y), y=Y)
     class_weights_dict = dict(zip(np.unique(Y), class_weights))
-    md = LogisticRegression(random_state=42, max_iter=1000, class_weight=class_weights_dict)
+    md = SVC(kernel='linear', C=1.0, class_weight=class_weights_dict, random_state=42)
     md.fit(X, Y)
     return md
 

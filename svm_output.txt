@@ -1,0 +1,4 @@
+Hiệu suất của model:
+Độ chính xác:  0.6931376780319378
+F1 Score (Weighted):  0.6938858447662097
+F1 Score (Macro):  0.6917352743761002
