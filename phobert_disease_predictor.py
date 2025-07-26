@@ -5,9 +5,10 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import torch
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
+from sklearn.utils.class_weight import compute_class_weight
 from torch.utils.data import Dataset, DataLoader
 from transformers import AutoTokenizer, AutoModel
 from underthesea import word_tokenize
@@ -41,15 +42,17 @@ def encoder(data, column_name, encoded_label_colname, ecr):
     return data
 
 # Kiem tra va truc quan hoa dataset
-def check_dataset_info(data):
+def check_dataset_info(data, label_colname):
     print("Nam dong dau tien dataset: ")
     print(data.sample(5))
-    print("\nSo luong label: ", data['Disease'].nunique())
+    print("\nSo luong label: ", data[label_colname].nunique())
     print("\nThong tin dataset: ")
     print(data.info())
 
 def visualize_dataset(data, name):
     sns.countplot(x=name, data=data)
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
     plt.show()
 
 # Xu ly van ban
@@ -77,19 +80,6 @@ def show_result(input_data, result):
     print(f"Câu hỏi: {input_data}")
     print(f"Dự đoán bệnh: {result}")
     print("-" * 30)
-
-def show_n_result(input_data, result):
-    print(f"Câu hỏi: {input_data}")
-    print("Các bệnh mà bạn có thể mắc phải (sắp xếp theo xác suất giảm dần):")
-    for (i, res) in enumerate(result):
-        print(f"Bệnh {i+1}: {res}")
-    print("-" * 30)
-
-# Ghi ket qua du doan ra file txt
-def export_result_to_txt(input_data, result, file):
-    file.write(f"Câu hỏi: {input_data}\n")
-    file.write(f"Dự đoán bệnh: {result}\n")
-    file.write("-" * 30 + "\n")
 
 # Cau hinh mo hinh PhoBERT
 PHOBERT_MODEL = "vinai/phobert-base-v2"
@@ -132,7 +122,7 @@ class PhoBERTDataset(Dataset):
         return len(self.labels)
 
 # Fine tune model PhoBERT
-def train_phobert_classifier(X_train, y_train, X_val, y_val, labels_num, tokenizer, epochs=8, batch_size=8):
+def train_phobert_classifier(X_train, y_train, X_val, y_val, labels_num, tokenizer, epochs=8, batch_size=8, class_weight="inverse"):
     train_ds = PhoBERTDataset(X_train, y_train, tokenizer)
     model = PhoBERTClassifier(labels_num)
     model = model.to(device)
@@ -142,6 +132,17 @@ def train_phobert_classifier(X_train, y_train, X_val, y_val, labels_num, tokeniz
     val_ds = PhoBERTDataset(X_val, y_val, tokenizer)
     val_loader = DataLoader(val_ds, batch_size=batch_size)
 
+    class_weights = None
+    if class_weight == 'balanced':
+        weights = compute_class_weight('balanced', classes=np.unique(y_train), y=y_train)
+        class_weights = torch.tensor(weights, dtype=torch.float).to(device)
+    elif class_weight == 'inverse':
+        class_counts = np.bincount(y_train)
+        weights = 1.0 / class_counts
+        class_weights = torch.tensor(weights, dtype=torch.float).to(device)
+    elif isinstance(class_weight, (list, np.ndarray)):
+        class_weights = torch.tensor(class_weight, dtype=torch.float).to(device)
+
     print(f"Train bằng {device} với {epochs} epochs...")
     for epoch in range(epochs):
         total_loss = 0
@@ -149,9 +150,9 @@ def train_phobert_classifier(X_train, y_train, X_val, y_val, labels_num, tokeniz
             optimizer.zero_grad()
             input_ids = batch['input_ids'].to(device)
             attention_mask = batch['attention_mask'].to(device)
-            y_train = batch['labels'].to(device)
+            labels = batch['labels'].to(device)
             logits = model(input_ids, attention_mask)
-            loss = torch.nn.functional.cross_entropy(logits, y_train)
+            loss = torch.nn.functional.cross_entropy(logits, labels, weight=class_weights)
             loss.backward()
             optimizer.step()
             total_loss += loss.item()
@@ -166,12 +167,18 @@ def train_phobert_classifier(X_train, y_train, X_val, y_val, labels_num, tokeniz
                 for batch in val_loader:
                     input_ids = batch['input_ids'].to(device)
                     attention_mask = batch['attention_mask'].to(device)
-                    y_train = batch['labels'].cpu().numpy()
+                    labels = batch['labels'].cpu().numpy()
                     logits = model(input_ids, attention_mask)
                     pred_idx = torch.argmax(logits, dim=1).cpu().numpy()
                     preds.extend(pred_idx)
-                    true_label.extend(y_train)
-            print(f"Độ chính xác: {accuracy_score(true_label, preds):.4f}")
+                    true_label.extend(labels)
+            val_accuracy = accuracy_score(true_label, preds)
+            val_f1_weighted = f1_score(true_label, preds, average='weighted')
+            val_f1_macro = f1_score(true_label, preds, average='macro')
+
+            print(f"Độ chính xác tập validation: {val_accuracy:.4f}")
+            print(f"F1 Score (Weighted) tập validation: {val_f1_weighted:.4f}")
+            print(f"F1 Score (Macro) tập validation: {val_f1_macro:.4f}")
             model.train()
 
     return model
@@ -187,14 +194,43 @@ def load_phobert_model(model_path, labels_num):
     model.to(device)
     return model
 
-def test_model_using_dataset(model, tokenizer, label_encoder, dataset, feature_colname, processed_feature_colname, output_path="test_results.txt"):
-    with open(output_path, "w", encoding="utf-8") as f:
-        for _,row in dataset.iterrows():
-            question = row[feature_colname]
-            processed_question = row[processed_feature_colname]
-            result = predict(processed_question, model, tokenizer, label_encoder)
-            export_result_to_txt(question, result, f)
-    print("Kết quả đã được ghi vào file.")
+# Test model
+def test_model_using_test_dataset(model, tokenizer, label_encoder, X_test, y_test):
+    model.eval()
+    y_pred = []
+    with torch.no_grad():
+        for text in X_test:
+            inputs = phobert_encode(text, tokenizer)
+            input_ids = inputs['input_ids'].to(device)
+            attention_mask = inputs['attention_mask'].to(device)
+            logits = model(input_ids, attention_mask)
+            pred_idx = torch.argmax(logits, dim=1).item()
+            y_pred.append(pred_idx)
+    accuracy = accuracy_score(y_test, y_pred)
+    f1_weighted = f1_score(y_test, y_pred, average='weighted')
+    f1_macro = f1_score(y_test, y_pred, average='macro')
+    cm = confusion_matrix(y_test, y_pred)
+    class_names = label_encoder.classes_
+    class_report = classification_report(y_test, y_pred, target_names=class_names)
+
+    print("\n" + "-"*30)
+    print("Hiệu suất trên tập test của model:")
+    print(f"Độ chính xác: {accuracy:.4f}")
+    print(f"F1 Score (Weighted): {f1_weighted:.4f}")
+    print(f"F1 Score (Macro): {f1_macro:.4f}")
+    print("\nBáo cáo của nhóm bệnh:")
+    print(class_report)
+
+    plt.figure(figsize=(12, 10))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                xticklabels=class_names, yticklabels=class_names)
+    plt.title('Phân loại nhóm bệnh dựa trên câu hỏi triệu chứng')
+    plt.xlabel('Nhóm bệnh dự đoán')
+    plt.ylabel('Nhóm bệnh thực tế')
+    plt.xticks(rotation=45, ha='right')
+    plt.yticks(rotation=0)
+    plt.tight_layout()
+    plt.show()
 
 # Du doan su dung PhoBERT da duoc fine tune
 def predict(x, model, tokenizer, label_encoder):
@@ -216,26 +252,34 @@ def n_predict(x, model, tokenizer, label_encoder, top_k=3):
         logits = model(input_ids, attention_mask)
         probs = torch.nn.functional.softmax(logits, dim=1)
         topk_prob, topk_idx = torch.topk(probs, k=top_k, dim=1)
+        topk_prob = topk_prob.squeeze().cpu().numpy()
         topk_idx = topk_idx.squeeze().cpu().numpy()
         topk_labels = label_encoder.inverse_transform(topk_idx)
-        return topk_labels.tolist()
+        return tuple(zip(topk_labels, topk_prob))
 
 if __name__ == "__main__":
     # Tai va chuan bi du lieu huan luyen
-    df = dataset_loader("hf://datasets/PB3002/ViMedical_Disease/ViMedical_Disease.csv")
-    check_dataset_info(df)
-    visualize_dataset(df, 'Disease')
+    df = dataset_loader("hf://datasets/joon985/ViMedical_Disease_Category/ViMedicalDiseaseCategory.csv")
+    check_dataset_info(df, 'DiseaseCategory')
+    visualize_dataset(df, 'DiseaseCategory')
     label_encoder = LabelEncoder()
-    df = encoder(df, 'Disease', 'Disease_encoded', label_encoder)
-    df = process_data(df, 'Disease', 'Question', 'Question_processed')
+    df = encoder(df, 'DiseaseCategory', 'DiseaseCategory_encoded', label_encoder)
+    df = process_data(df, 'DiseaseCategory', 'Question', 'Question_processed')
 
-    # Chia tap train va tap validation ty le 8:2
-    X_train, X_val, y_train, y_val = train_test_split(
+    # Chia tap train, validation va test theo ty le 8:1:1
+    X_train, X_temp, y_train, y_temp = train_test_split(
         df["Question_processed"].tolist(),
-        df["Disease_encoded"].tolist(),
+        df["DiseaseCategory_encoded"].tolist(),
         test_size=0.2,
         random_state=42,
-        stratify=df["Disease_encoded"].tolist()
+        stratify=df["DiseaseCategory_encoded"].tolist()
+    )
+    X_val, X_test, y_val, y_test = train_test_split(
+        X_temp,
+        y_temp,
+        test_size=0.5,
+        random_state=42,
+        stratify=y_temp
     )
 
     # Fine tune PhoBERT model
@@ -245,11 +289,9 @@ if __name__ == "__main__":
     # Luu model
     torch.save(phobert_model.state_dict(), "model.pth")
 
-    # Tai model PhoBERT da fine tune
+    # Tai model PhoBERT da fine tune (neu can)
     # num_labels = len(label_encoder.classes_)
-    # phobert_model = load_phobert_model(get_model_path("joon985/PhoBERTDiseasePredictor", "model.pth"), num_labels)
+    # phobert_model = load_phobert_model(get_model_path("joon985/PhoBERTDiseaseCategoryPredictor", "model.pth"), num_labels)
 
-    # Kiem thu model
-    df_test = dataset_loader("hf://datasets/joon985/MedicalTestDataset/MedicalTestDataset.csv")
-    df_test = process_data(df_test, 'Disease', 'Question', 'Question_processed')
-    test_model_using_dataset(phobert_model, tokenizer, label_encoder, df_test, 'Question','Question_processed')
+    # Danh gia model tren tap test
+    test_model_using_test_dataset(phobert_model, tokenizer, label_encoder, X_test, y_test)

@@ -1,5 +1,10 @@
-MedicalTestDataset : 62.5%
-Tổng số mẫu: 100
-Mẫu dự đoán đúng: 52
-Mẫu dự đoán đúng 1 phần: 21
-Mẫu dự đoán sai: 27
+Hiệu suất trên tập validation của model:
+Độ chính xác tập validation: 0.7625
+F1 Score (Weighted) tập validation: 0.7649
+F1 Score (Macro) tập validation: 0.7584
+
+------------------------------
+Hiệu suất trên tập test của model:
+Độ chính xác: 0.7506
+F1 Score (Weighted): 0.7531
+F1 Score (Macro): 0.7679

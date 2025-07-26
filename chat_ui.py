@@ -1,5 +1,7 @@
+import time
+
 import streamlit as st
-from phobert_disease_predictor import get_model_path, load_phobert_model, n_predict, AutoTokenizer, LabelEncoder, encoder, dataset_loader
+from phobert_disease_predictor import get_model_path,n_predict, load_phobert_model, AutoTokenizer, LabelEncoder, encoder, dataset_loader
 
 st.set_page_config(page_title="Disease Predictor", layout="wide", initial_sidebar_state="collapsed")
 
@@ -18,12 +20,12 @@ st.markdown("""
 
 @st.cache_resource(show_spinner=True)
 def initialize_model():
-    df = dataset_loader("hf://datasets/PB3002/ViMedical_Disease/ViMedical_Disease.csv")
+    df = dataset_loader("hf://datasets/joon985/ViMedical_Disease_Category/ViMedicalDiseaseCategory.csv")
     label_encoder = LabelEncoder()
-    df = encoder(df, 'Disease', 'Disease_encoded', label_encoder)
+    df = encoder(df, 'DiseaseCategory', 'DiseaseCategory_encoded', label_encoder)
     num_labels = len(label_encoder.classes_)
     tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base-v2")
-    model = load_phobert_model(get_model_path("joon985/PhoBERTDiseasePredictor", "model.pth"), num_labels)
+    model = load_phobert_model(get_model_path("joon985/PhoBERTDiseaseCategoryPredictor", "model.pth"), num_labels)
     return model, tokenizer, label_encoder
 
 
@@ -47,11 +49,13 @@ with st.form(key="chat_form", clear_on_submit=True):
     send_btn = st.form_submit_button("Gửi")
     if send_btn and user_input.strip():
         st.session_state["messages"].append({"role": "user", "content": user_input})
-        diseases = n_predict(user_input, model, tokenizer, label_encoder, top_k=3)
-        bot_intro = "Dựa trên các triệu chứng của bạn, các bệnh bạn có thể mắc phải là: "
+        disease_cates = n_predict(user_input, model, tokenizer, label_encoder)
+        bot_intro = "Dựa trên các triệu chứng của bạn, bệnh mà bạn mắc phải có thể thuộc các nhóm sau: "
         st.session_state["messages"].append({"role": "bot", "content": bot_intro})
-        bot_reply = "<br>".join([f"Bệnh {i + 1}: {d}" for i, d in enumerate(diseases)])
-        st.session_state["messages"].append({"role": "bot", "content": bot_reply})
+        for(disease_cate, prob) in disease_cates:
+            bot_reply = f"<strong>{disease_cate}</strong><br>Xác suất: {prob*100:.2f}%"
+            st.session_state["messages"].append({"role": "bot", "content": bot_reply})
+            time.sleep(1)
         st.rerun()
 
 st.markdown(
