@@ -122,7 +122,7 @@ class PhoBERTDataset(Dataset):
         return len(self.labels)
 
 # Fine tune model PhoBERT
-def train_phobert_classifier(X_train, y_train, X_val, y_val, labels_num, tokenizer, epochs=8, batch_size=8, class_weight="inverse"):
+def train_phobert_classifier(X_train, y_train, X_val, y_val, labels_num, tokenizer, epochs=8, batch_size=8):
     train_ds = PhoBERTDataset(X_train, y_train, tokenizer)
     model = PhoBERTClassifier(labels_num)
     model = model.to(device)
@@ -132,16 +132,8 @@ def train_phobert_classifier(X_train, y_train, X_val, y_val, labels_num, tokeniz
     val_ds = PhoBERTDataset(X_val, y_val, tokenizer)
     val_loader = DataLoader(val_ds, batch_size=batch_size)
 
-    class_weights = None
-    if class_weight == 'balanced':
-        weights = compute_class_weight('balanced', classes=np.unique(y_train), y=y_train)
-        class_weights = torch.tensor(weights, dtype=torch.float).to(device)
-    elif class_weight == 'inverse':
-        class_counts = np.bincount(y_train)
-        weights = 1.0 / class_counts
-        class_weights = torch.tensor(weights, dtype=torch.float).to(device)
-    elif isinstance(class_weight, (list, np.ndarray)):
-        class_weights = torch.tensor(class_weight, dtype=torch.float).to(device)
+    weights = compute_class_weight('balanced', classes=np.unique(y_train), y=y_train)
+    class_weights = torch.tensor(weights, dtype=torch.float).to(device)
 
     print(f"Train bằng {device} với {epochs} epochs...")
     for epoch in range(epochs):
