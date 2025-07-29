@@ -31,7 +31,7 @@ def initialize_model():
 
 model, tokenizer, label_encoder = initialize_model()
 
-st.title("Disease Predictor")
+st.title("Disease Group Predictor")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
